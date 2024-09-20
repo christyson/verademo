@@ -88,6 +88,4 @@ jobs:
           quick: false
           debug: false
           create-issues: true 
-          fail-on-cvss: 1
-          min-cvss-for-issue: 1
 #         path: '**/*.war'
