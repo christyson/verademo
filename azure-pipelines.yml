@@ -8,7 +8,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: Maven@3
+- task: Maven@4
   displayName: 'build verademo'
   inputs:
     mavenPomFile: 'pom.xml'
