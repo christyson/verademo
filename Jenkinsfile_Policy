@@ -19,6 +19,8 @@ pipeline {
                   echo ST is $SRCCLR_API_TOKEN
                   echo user=$USER home=$HOME
                   export DEBUG=1
+                  export SRCCLR_API_TOKEN=$SRCCLR_API_TOKEN
+                  export SRCCLR_CONFIG="./applications/srcclr"
                   curl -sSL  https://sca-downloads.veracode.com/ci.sh | CACHE_DIR="./applications" sh
                '''
             }
