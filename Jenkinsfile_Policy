@@ -21,6 +21,7 @@ pipeline {
                   export DEBUG=1
                   export SRCCLR_API_TOKEN=$SRCCLR_API_TOKEN
                   export JAVA_OPTS="-Duser.home=./applications"
+                  mkdir ./applications/.srcclr
                   curl -sSL  https://sca-downloads.veracode.com/ci.sh | sh
                '''
             }
