@@ -18,7 +18,6 @@ pipeline {
                sh '''
                   echo ST is $SRCCLR_API_TOKEN
                   echo user=$USER home=$HOME
-                  finger $USER
                   touch $HOME/test_file
                   rm -f $HOME/test_file
                   export DEBUG=1
