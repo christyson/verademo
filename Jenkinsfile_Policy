@@ -18,8 +18,6 @@ pipeline {
                sh '''
                   echo ST is $SRCCLR_API_TOKEN
                   echo user=$USER home=$HOME
-                  touch $HOMEtest_file
-                  rm -f $HOMEtest_file
                   mkdir applications
                   export DEBUG=1
                   curl -sSL  https://sca-downloads.veracode.com/ci.sh | CACHE_DIR="/applications" sh
