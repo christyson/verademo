@@ -20,7 +20,7 @@ pipeline {
                   echo user=$USER home=$HOME
                   export DEBUG=1
                   export SRCCLR_API_TOKEN=$SRCCLR_API_TOKEN
-                  JAVA_OPTS="-Duser.home=./applications"
+                  export SRCCLR_JAVA_OPTS="-Duser.home=./applications"
                   curl -sSL  https://sca-downloads.veracode.com/ci.sh | CACHE_DIR="./applications" sh
                '''
             }
