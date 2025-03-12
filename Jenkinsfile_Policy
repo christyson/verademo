@@ -16,8 +16,9 @@ pipeline {
          steps {
             withCredentials([string(credentialsId: 'SRCCLR_API_TOKEN', variable: 'SRCCLR_API_TOKEN')]) {
                sh '''
-                  echo $SCRCLR_API_TOKEN
-                  curl -sSL https://download.sourceclear.com/ci.sh | sh --debug
+                  echo ST is $SRCCLR_API_TOKEN
+                  export DEBUG=1
+                  curl -sSL  https://sca-downloads.veracode.com/ci.sh | sh
                '''
             }
          }
