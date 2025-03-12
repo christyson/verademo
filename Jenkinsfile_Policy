@@ -16,9 +16,6 @@ pipeline {
          steps {
             withCredentials([string(credentialsId: 'SRCCLR_API_TOKEN', variable: 'SRCCLR_API_TOKEN')]) {
                sh '''
-                  echo ST is $SRCCLR_API_TOKEN
-                  echo user=$USER home=$HOME
-                  export DEBUG=1
                   export SRCCLR_API_TOKEN=$SRCCLR_API_TOKEN
                   export JAVA_OPTS="-Duser.home=/tmp"
                   curl -sSL  https://sca-downloads.veracode.com/ci.sh | sh
