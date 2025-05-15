@@ -58,8 +58,7 @@ Login with a username/password as defined in `Utils.java`
 
 Verademo will also run out-of-the-box in AWS. Simply upload the `target/verademo.war` file into a Tomcat Elastic Beanstalk environment (with associated Amazon RDS). The database credentials listed above are not required when running in AWS.
 
-
-
+# test
 On the first environment deployment, a script will automatically setup the database. Subsequent application re-deploys (without environment re-deploy), or application server restarts will not alter the database.
 
 ## Exploitation Demos
