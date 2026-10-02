@@ -31,10 +31,12 @@ steps:
           export SRCCLR_SCM_REF=master
           export SRCCLR_SCM_REF_TYPE=branch
           export SRCCLR_SCM_REV="$(build.buildNumber)"
-          curl -sSL https://download.sourceclear.com/ci.sh | bash -s -- scan --update-advisor
+          curl -sSL https://download.sourceclear.com/ci.sh | bash -s -- scan --update-advisor --appname 'AzureDevOps-VeraDemo_pipeline'
   continueOnError: true
   env:
     SRCCLR_API_TOKEN: $(SRCCLR_API_TOKEN)
+    veracode_api_key_id: $(VERACODE_API_ID)
+    veracode_api_key_secret: $(VERACODE_API_KEY)
 
 - task: Veracode@3
   displayName: Veracode Static Scan 
